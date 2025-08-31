@@ -12,3 +12,4 @@ user_router = APIRouter()
 @user_router.get("/{user_id}")
 def get_user_posts(user_id: int, db: Session = Depends(get_session)):
     return getUserPostById(user_id, db)
+
